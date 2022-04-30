@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+{% load static %}
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width,
+    initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/be8c5b7455.js" crossorigin="anonymous"></script>
+    <title>BOB</title>
+    <link href={% static 'css/style.css'%} rel="stylesheet">
+   
+
+    <header>
+        <nav>
+            <a class="logo" href="#">Gestor BOB</a>
+            <div class="mobile-menu">
+                <div class="line1"></div>
+                <div class="line2"></div>
+                <div class="line3"></div>
+            </div>
+            
+            <ul class="nav-list">
+                <li><a href="{% url 'home' %}">Inicio</a></li>
+                <li><a href= "{% url 'sobre' %}">Sobre</a></li>
+                <li><a href="{% url 'acervo' %}">Acervo</a></li>
+                <li><a href="{% url 'contato' %}">Contatos</a></li>
+            </ul>
+        </nav>
+    </header>
+    
+    <script src="mobile-navbar.js"></script>
+
+</head>
+
+<body class="body_2">
+    <link href={% static 'css/style2.css'%} rel="stylesheet">
+
+        
+    <form action="" method="GET">
+        <div>
+            <h1 class="h1_centro">Barra de pesquisa</h1>
+        </div>
+
+        <div class="campo">
+            <label><strong> Titulo </strong></label>
+            <input  type="text" name="titulo" placeholder="Titulo do livro" id="t1" valeu="{{ request.GET.titulo }}">
+            <a href= "{% url 'acervo' %}" style="color:black"> Limpar </a>
+        </div>
+
+        <div class="campo">
+            <label><strong>Autor</strong></label>
+            <input  type="text" name="pesquisa" placeholder="Nome do autor" valeu="{{ request.GET.pesquisa }}" >
+            
+        </div>
+
+        <div >
+            <h1 class="h1" style='font-size: 100%'>Não especifico</h1>
+            <label>Gênero Literario</label>
+            <select name="genero" id="genero" valeu="{{ request.GET.genero }}">
+                <option ></option>
+                <option value="TERROR">Terror</i></option>
+                <option value="ROMANCE">Romance</option>
+                <option value="SUSPENSE">Suspense</option>
+                <option value="FICCAO">Ficção</option>
+                <option value="AVENTURA">Aventura</option>
+            </select>
+        </div>
+            
+        <button class="botao" type="submit"> <i class="fa-solid fa-magnifying-glass"> Buscar </i></i></button>
+    </form>
+
+
+
+    <div class="card_livros">
+        {% for livro in todos_livros %}
+                {% if   livro.genero == request.GET.genero %}
+                    <div class="card_item">
+                        <img src="{{livro.imagem_capa.url}}" alt="livro" style="width: 30%;">
+                        <div class="card_content">
+                            <h3> {{ livro.titulo }} - {{livro.ano_publicacao}}</h3>
+            
+                            <p> {{ livro.descricao }}</p>
+            
+                            <button type="button" class="botao2" style="color: #22b929">Ver livro</button>
+                        </div>
+                    </div>
+                {% endif %}
+                {% if request.GET.genero == '' %}
+                    {% if livro.titulo == request.GET.titulo or  livro.nome_autor == request.GET.pesquisa%}
+                        <div class="card_item">
+                            <img src="{{livro.imagem_capa.url}}" alt="livro" style="width: 30%;">
+                            <div class="card_content">
+                                <h3> {{ livro.titulo }} - {{livro.ano_publicacao}}</h3>
+                
+                                <p> {{ livro.descricao }}</p>
+                
+                                <button type="button"  class= "botao2" style="color: #22b929" >Ver livro</button>
+                            </div>
+                        </div>
+                    {% endif %}
+                {% endif %}
+
+            {% empty %}
+            <label><strong>Nenhum livro listado</strong></label>
+        {% endfor %}
+
+
+
+ 
+</body>
+
+</html>

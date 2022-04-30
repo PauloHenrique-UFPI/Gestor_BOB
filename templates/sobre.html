@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+{% load static %}
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width,
+    initial-scale=1.0">
+    <title>BOB</title>
+    <link href={% static 'css/style.css'%} rel="stylesheet">
+
+    <header>
+        <nav>
+            <a class="logo" href="#">Gestor BOB</a>
+            <div class="mobile-menu">
+                <div class="line1"></div>
+                <div class="line2"></div>
+                <div class="line3"></div>
+            </div>
+            
+            <ul class="nav-list">
+                <li><a href="{% url 'home' %}">Inicio</a></li>
+                <li><a href= "{% url 'sobre' %}">Sobre</a></li>
+                <li><a href="{% url 'acervo' %}">Acervo</a></li>
+                <li><a href="{% url 'contato' %}">Contatos</a></li>
+            </ul>
+        </nav>
+    </header>
+    
+    <script src="mobile-navbar.js"></script>
+
+</head>
+
+<body>
+
+   
+
+    <div class="sobre">
+        <h3 class="unico">Quem somos nós?</h3>
+        <p>
+            A Biblioteca "Olavo Bilac" foi registrada em 18 de outubro de 1973 e reinaugurada 
+            em suas novas instalações no dia 08 de outubro de 2010, nas comemorações dos 45 anos
+            da Instituição. Ela está inserida no Centro de Integração Científica, Cultural e 
+            Tecnológica - CICCT, localizado no prédio 5 do Inatel.
+        </p>
+        <div class="img">
+            <img src="{% static 'images/biblioteca.jpg' %}" alt="ilustra" style="width: 60%;">
+        </div>
+        <p>
+            Possui área total de 1673m², dos quais 256m² são destinadas ao acervo bibliográfico. 
+            Todo o acervo é catalogado pela (CDU) Classificação Universal Decimal – CDU, por área que
+            propoem conhecimento e de acordo com as exigências do CNPq.
+        </p>
+    </div>
+
+    
+  
+</body>

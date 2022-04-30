@@ -1,0 +1,148 @@
+@import url('https://fonts.googleapis.com/css2?family=BhuTuka+Expanded+One&family=League+Gothic&family=Syne+Mono&display=swap');
+
+
+form {
+    margin-left: 25%;
+    margin-top: 2%;
+    margin-right: 30%;
+    font-family: 'Syne Mono', monospace;
+    padding: 30px 35px;
+    border-radius: 20px;
+    box-shadow: 0px 10px 40px #201b2c;
+
+}
+
+#check{
+    display: inline-block;
+}
+
+h1{
+    
+    color: #380B61;
+    margin-left: 25%;
+   
+}
+h2{
+    
+    color: #380B61;
+   
+}
+
+
+/* Elemento de tag <body> */
+
+
+.body_1{
+    background: url("m2.png") no-repeat center center;
+    background-size: cover;
+
+    
+    font-size: 1em;
+    color: #59429d;
+    
+    justify-content: center;
+}
+
+.body_2{
+    background: url("corredor.jpg") no-repeat ;
+    background-size: cover;
+
+    
+    font-size: 1em;
+    color: #59429d;
+    
+    justify-content: center;
+}
+
+form{
+    background-color: #F0F8FF;
+}
+
+input, select, textarea {
+    font-family: sans-serif;
+    font-size: 1em;
+    color: #59429d;
+    border-radius: 5px;
+}
+
+
+
+.grupo:before, .grupo:after {
+    display: table;
+}
+
+
+.grupo:after {
+    clear: both;
+}
+
+
+.campo {
+    margin-bottom: 1em;
+}
+
+
+.campo label {
+    margin-bottom: 0.2em;
+    color: #59429d;
+    display: block;
+}
+
+
+
+.campo input[type="text"], .campo input[type="email"], .campo select, .campo textarea {
+    padding: 0.2em;
+    border: 1px solid #59429d;
+    box-shadow: 2px 2px 2px rgba(0,0,0,0.2);
+    display: block;
+}
+.campo input[type="text"], .campo input[type="email"]{
+    width: 70%;
+}
+
+h1 .h1_centro{
+    margin-left: 25%;
+}
+
+.campo select option {
+    padding-right: 1em;
+}
+
+
+.campo input:focus, .campo select:focus, .campo textarea:focus {
+    background: #E0E0F8;
+}
+
+
+
+.botao2 {
+    font-size: 1.2em;
+    background: #59429d;
+    border: 0;
+    margin-bottom: 1em;
+    color: #ffffff;
+    padding: 0.2em 0.6em;
+    box-shadow: 2px 2px 2px rgba(0,0,0,0.2);
+    text-shadow: 1px 1px 1px rgba(0,0,0,0.5);
+    position: absolute;
+    margin-left: 19%;
+    margin-top: 2%;
+    margin-right: 30%;
+    transform: translate(-50%, -50%)
+}
+
+.botao2:hover {
+    background: #CCBBFF;
+    box-shadow: inset 2px 2px 2px rgba(0,0,0,0.2);
+    text-shadow: none;
+}
+
+
+.botao2, select{
+    cursor: pointer;
+}
+
+label .exp{
+    margin-left: 40%;
+}
+

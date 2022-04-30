@@ -11,6 +11,7 @@ https://docs.djangoproject.com/en/3.0/ref/settings/
 """
 
 import os
+from re import M
 
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
@@ -40,10 +41,14 @@ INSTALLED_APPS = [
     
     
 ]
+INSTALLED_APPS += [
+    'widget_tweaks',
+]
 
 INSTALLED_APPS += [
     'usuarios',    
     'funcionarios',
+    'livros',
 ]
 
 MIDDLEWARE = [
@@ -128,6 +133,10 @@ USE_TZ = True
 
 STATIC_URL = '/static/'
 
+MEDIA_URL = '/images/'
+
 STATICFILES_DIRS = [
     os.path.join(BASE_DIR, "static")
 ]
+
+MEDIA_ROOT = os.path.join(BASE_DIR, 'static/images')

@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+{% load static %}
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width,
+    initial-scale=1.0">
+    <title>BOB</title>
+    <link href={% static 'css/style.css'%} rel="stylesheet">
+    
+
+    <header>
+        <nav>
+            <a class="logo" href="#">Gestor BOB</a>
+            <div class="mobile-menu">
+                <div class="line1"></div>
+                <div class="line2"></div>
+                <div class="line3"></div>
+            </div>
+            
+            <ul class="nav-list">
+                <li><a href="{% url 'home' %}">Inicio</a></li>
+                <li><a href= "{% url 'sobre' %}">Sobre</a></li>
+                <li><a href="{% url 'acervo' %}">Acervo</a></li>
+                <li><a href="{% url 'contato' %}">Contatos</a></li>
+            </ul>
+        </nav>
+    </header>
+    
+    <script src="mobile-navbar.js"></script>
+
+</head>
+
+<body class="body_1">
+    <link href={% static 'css/style2.css'%} rel="stylesheet">
+    <div >
+        
+        <form >
+            <h1 id="titutol">Algum problema?</h1>
+            <h2 id="subtitulo">Entre em contato</h2>
+            <div class="campo">
+                <label> <strong> Nome </strong></label>
+                <input type="text" name="nome" id="nome" required>
+            </div>
+
+            <div class="campo">
+                <label> <strong> Telefone </strong></label>
+                <input type="text" name="Telefone" id="telefone">
+            </div>
+
+            <div class="campo">
+                <label> <strong> Email </strong></label>
+                <input type="email" name="email" id="email" required>
+            </div>
+
+
+            <div class="campo1">
+                <label>Qual o motivo da mensagem:</label>
+                <label>
+                    <input type="radio" name="op_mensagem" value="op1" checked> Elogio
+                </label> 
+                <label>
+                    <input type="radio" name="op_mensagem" value="op2"> Sugestão 
+                </label> 
+                <label> 
+                    <input type="radio" name="op_mensagem" value="op3"> Critica 
+                </label> 
+                <label>
+                    <input type="radio" name="op_mensagem" value="op4"> Sistema
+                </label> 
+            </div>
+
+            <div class="campo">
+                <br>
+                <label class="exp"> Escreva sua mensagem </label>
+                <textarea name="mensagem" id="mensagem" rows="6" style="width: 35em" required></textarea>
+            </div>
+
+            <button type="submit" class="botao"> Enviar </button>
+
+        </form>
+    </div>
+</body>
