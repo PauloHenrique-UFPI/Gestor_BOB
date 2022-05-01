@@ -12,11 +12,13 @@
     padding: 0.2em;
     border-radius: 2%;
     margin-block-end: 4%;
+    flex-direction: column;
 }
 
 .ifo1{
     margin-top: 2%;
 }
+
 
 h1 {
     margin-top: 2%;
