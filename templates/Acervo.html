@@ -12,7 +12,7 @@
     initial-scale=1.0">
     <script src="https://kit.fontawesome.com/be8c5b7455.js" crossorigin="anonymous"></script>
     <title>BOB</title>
-    <link href= "{% static 'css/style.css'%}" rel="stylesheet">
+    <link rel="stylesheet"  href= "{% static 'css/style1.css' %}">
    
 
     <header>
@@ -43,13 +43,12 @@
         
     <form action="" method="GET">
         <div>
-            <h1 class="h1_centro">Barra de pesquisa</h1>
+            <h2 class="h1_centro">Barra de pesquisa</h2>
         </div>
 
         <div class="campo">
             <label><strong> Titulo </strong></label>
             <input  type="text" name="titulo" placeholder="Titulo do livro" id="t1" valeu="{{ request.GET.titulo }}">
-            <a href= "{% url 'acervo' %}" style="color:black"> Limpar </a>
         </div>
 
         <div class="campo">
@@ -59,7 +58,7 @@
         </div>
 
         <div >
-            <h1 class="h1" style='font-size: 100%'>Não especifico</h1>
+            <h2 class="h1" style='font-size: 100%'>Não especifico</h2>
             <label>Gênero Literario</label>
             <select name="genero" id="genero" valeu="{{ request.GET.genero }}">
                 <option ></option>
@@ -85,7 +84,9 @@
                             <h3> {{ livro.titulo }} - {{livro.ano_publicacao}}</h3>
                             <p> {{ livro.descricao }}</p>
                         </div>
-                        <button type="button" class="botao2" style="color: #22b929">Ver livro</button>
+                        <a type="button" href="{% url 'informacoes_livros' livro.id %}">
+                            <input type="button" value="Ver livro">
+                        </a>
                     </div>
                 {% endif %}
                 {% if request.GET.genero == '' %}
@@ -96,7 +97,9 @@
                             <h3> {{ livro.titulo }} - {{livro.ano_publicacao}}</h3>
                             <p> {{ livro.descricao }}</p>
                         </div>
-                        <button type="button" class="botao2" style="color: #22b929">Ver livro</button>
+                        <a type="button" href="{% url 'informacoes_livros' livro.id %}">
+                            <input type="button" value="Ver livro">
+                        </a>
                     </div>
                     {% endif %}
                 {% endif %}

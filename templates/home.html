@@ -9,12 +9,12 @@
     <meta name="viewport" content="width=device-width,
     initial-scale=1.0">
     <title>BOB</title>
-    <link href={% static 'css/style.css'%} rel="stylesheet">
-    <script src="https://kit.fontawesome.com/be8c5b7455.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet"  href= "{% static 'css/styleP1.css' %}">
+    
 
     <header>
         <nav>
-            <a class="logo" href="index.html">Gestor BOB</a>
+            <a class="logo" href="#">Gestor BOB</a>
             <div class="mobile-menu">
                 <div class="line1"></div>
                 <div class="line2"></div>
@@ -35,7 +35,29 @@
 </head>
 
 <body>
-    <h3>Bem vindo a nosso site</h3>
+    <link rel="stylesheet"  href= "{% static 'css/styleHome.css' %}">
+    <div class="titulo_pagina">
+        <h2> Bem vindo ao nosso site </h2>
+    </div>
+    <p> 
+        Navegue pelas paginas, na pagina de acervo você pode pesquisar pelo seu livro favorito
+        além de encontrar diversos livros que podem te interessar.
+    </p>
+    <div class="cima">
+            
+        <img src="{% static 'images/tela_acervo.png' %}">
+
+        <p>
+            "Somos um planeta vivo, Sofia! Somos um grande barco navegando ao redor de um sol incandescente 
+            no universo. Mas cada um de nós é um barco em si mesmo, um barco carregado de genes navegando pela 
+            vida. Se conseguirmos levar esta carga ao porto mais próximo, nossa vida não terá sido em vão." (Jostein Gaarder)
+        </p>
+
+        <p>
+            "Sou atormentado por uma coceira interminável por coisas distantes. Eu adoro navegar por mares proibidos." (Moby Dick)
+        </p>
+    </div>
+
 </body>
 
 
