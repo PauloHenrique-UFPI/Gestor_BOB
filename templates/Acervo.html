@@ -83,25 +83,21 @@
                         <img src="{{livro.imagem_capa.url}}" alt="livro" style="width: 30%;">
                         <div class="card_content">
                             <h3> {{ livro.titulo }} - {{livro.ano_publicacao}}</h3>
-            
                             <p> {{ livro.descricao }}</p>
-            
-                            <button type="button" class="botao2" style="color: #22b929">Ver livro</button>
                         </div>
+                        <button type="button" class="botao2" style="color: #22b929">Ver livro</button>
                     </div>
                 {% endif %}
                 {% if request.GET.genero == '' %}
                     {% if livro.titulo == request.GET.titulo or  livro.nome_autor == request.GET.pesquisa%}
-                        <div class="card_item">
-                            <img src="{{livro.imagem_capa.url}}" alt="livro" style="width: 30%;">
-                            <div class="card_content">
-                                <h3> {{ livro.titulo }} - {{livro.ano_publicacao}}</h3>
-                
-                                <p> {{ livro.descricao }}</p>
-                
-                                <button type="button"  class= "botao2" style="color: #22b929" >Ver livro</button>
-                            </div>
+                    <div class="card_item">
+                        <img src="{{livro.imagem_capa.url}}" alt="livro" style="width: 30%;">
+                        <div class="card_content">
+                            <h3> {{ livro.titulo }} - {{livro.ano_publicacao}}</h3>
+                            <p> {{ livro.descricao }}</p>
                         </div>
+                        <button type="button" class="botao2" style="color: #22b929">Ver livro</button>
+                    </div>
                     {% endif %}
                 {% endif %}
 

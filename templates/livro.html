@@ -1,4 +1,6 @@
 {% load static %}
+{% load widget_tweaks %}
+
 
 <!DOCTYPE html>
 <html lang="pt-br">
@@ -10,7 +12,7 @@
     initial-scale=1.0">
     
     <title>BOB</title>
-    <link rel="stylesheet"  href= "{% static 'css/style.css' %}">
+    <link rel="stylesheet"  href= "{% static 'css/styleP1.css' %}">
    
 
     <header>
@@ -36,15 +38,16 @@
 </head>
 
 <body>
+    <link href= "{% static 'css/style3.css' %}" rel="stylesheet">
     <div>
-        <div class="sobre">        
+        <div class="postagem-content">        
             <div>
 
                 <h1> {{ livro.titulo }} </h1>
 
-                <img src="{{livro.imagem_capa.url}}" alt="livro" style="width: 50%; margin-left: 25%;  margin-top: 4%; border-radius: 5%;">
+                <img src="{{livro.imagem_capa.url}}" alt="livro">
                 
-                <h2 class="mb-3 text-primary" style="margin-top: 2%;">
+                <h2 class="ifo1" style="margin-top: 2%;">
                     Informações Gerais:
                 </h2>
             
