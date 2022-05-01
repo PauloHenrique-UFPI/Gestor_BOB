@@ -2,14 +2,13 @@
 <html lang="pt-br">
 
 {% load static %}
-{% load widget_tweaks %}
 
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width,
     initial-scale=1.0">
-    <script src="https://kit.fontawesome.com/be8c5b7455.js" crossorigin="anonymous"></script>
+    
     <title>BOB</title>
     <link href={% static 'css/style.css'%} rel="stylesheet">
    
@@ -38,52 +37,47 @@
 
 <body>
     <div class="sobre">
-        <div class="d-sm-flex align-items-center justify-content-between mb-4">
-            <h1 class="h3 mb-0 text-gray-800">{{ nome_pagina }}</h1>
-        </div>
-        
-        <div class="card shadow mb-4">        
-            <div class="card-body">
-                <h4 class="mb-3 text-primary">
-                    Informações gerais
-                </h4>
 
-                <img src="{{livro.imagem_capa.url}}" alt="livro" style="width: 30%;">
+        <div>        
+            <div class="card-body">
+
+                <h1> {{ livro.titulo }} </h1>
+
+                <img src="{{livro.imagem_capa.url}}" alt="livro" style=" width: 50%; margin-left: 25%;  margin-top: 4%; border-radius: 5%;">
+                
+                <h2 class="mb-3 text-primary" style="margin-top: 2%;">
+                    Informações Gerais:
+                </h2>
             
                 <form>
                     <div class="form-row">
-                        <div class="linha">
-                            <label> Titulo: </label>
-                            <h2> {{ livro.titulo }} </h2>
-                        </div>
+                       
     
                         <div class="linha">
                             <label> Autor: </label>
-                            <h2> {{ livro.nome_autor }} </h2>
+                            <label> {{ livro.nome_autor }} </label>
                         </div>
 
                         <div class="linha">
                             <label> Data de Publicação: </label>
-                            <h2> {{ livro.ano_publicacao }} </h2>
+                            <label> {{ livro.ano_publicacao }} </label>
                         </div>
 
                         <div class="linha">
                             <label> Genêro Literario: </label>
-                            <h2> {{ livro.genero }} </h2>
+                            <label> {{ livro.genero }}  </label>
                         </div>
 
                         <div class="linha">
                             <label> Exemplares Disponiveis: </label>
-                            <h2> {{ livro.numero_exemplares }} </h2>
+                            <label> {{ livro.numero_exemplares }}  </label>
                         </div>
 
-                        <div class="resenha">
-                            <label> Resenha: </label>
-                            <p> {{ livro.descricao }}</p>
+                        <div class="resenha" style="margin-top: 2%;">
+                            <label  style= "font-size:medium"> Resenha: </label>
+                            <p style="margin-top: 1%; margin-left: 2%"> {{ livro.descricao }} </p>
                         </div>
-                        <a href="#" class="btn btn-secondary text-white" type="button" style="color: rgba(0,0,0,0.2)">
-                            <span class="text">Voltar</span>
-                        </a>
+                        <button type="submit" class="botao" style="margin-left: 35%; margin-top: 3%;margin-block-end: 2%;">  <i class="fa-solid fa-magnifying-glass"> Reservar </i></i></button>
 
                         
                     </div>
@@ -97,3 +91,5 @@
 </body>
 
 </html>
+
+
