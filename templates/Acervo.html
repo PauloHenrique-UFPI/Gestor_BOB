@@ -1,7 +1,9 @@
+{% load static %}
+
 <!DOCTYPE html>
 <html lang="pt-br">
 
-{% load static %}
+
 
 <head>
     <meta charset="UTF-8">
@@ -10,7 +12,7 @@
     initial-scale=1.0">
     <script src="https://kit.fontawesome.com/be8c5b7455.js" crossorigin="anonymous"></script>
     <title>BOB</title>
-    <link href={% static 'css/style.css'%} rel="stylesheet">
+    <link href= "{% static 'css/style.css'%}" rel="stylesheet">
    
 
     <header>
@@ -31,7 +33,7 @@
         </nav>
     </header>
     
-    <script src="mobile-navbar.js"></script>
+    <script src="{% static 'js/mobile-navbar.js' %}"></script>
 
 </head>
 

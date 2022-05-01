@@ -1,7 +1,7 @@
+{% load static %}
+
 <!DOCTYPE html>
 <html lang="pt-br">
-
-{% load static %}
 
 <head>
     <meta charset="UTF-8">
@@ -10,7 +10,7 @@
     initial-scale=1.0">
     
     <title>BOB</title>
-    <link href={% static 'css/style.css'%} rel="stylesheet">
+    <link rel="stylesheet"  href= "{% static 'css/style.css' %}">
    
 
     <header>
@@ -31,19 +31,18 @@
         </nav>
     </header>
     
-    <script src="mobile-navbar.js"></script>
+    <script src="{% static 'js/mobile-navbar.js' %}"></script>
 
 </head>
 
 <body>
-    <div class="sobre">
-
-        <div>        
-            <div class="card-body">
+    <div>
+        <div class="sobre">        
+            <div>
 
                 <h1> {{ livro.titulo }} </h1>
 
-                <img src="{{livro.imagem_capa.url}}" alt="livro" style=" width: 50%; margin-left: 25%;  margin-top: 4%; border-radius: 5%;">
+                <img src="{{livro.imagem_capa.url}}" alt="livro" style="width: 50%; margin-left: 25%;  margin-top: 4%; border-radius: 5%;">
                 
                 <h2 class="mb-3 text-primary" style="margin-top: 2%;">
                     Informações Gerais:
