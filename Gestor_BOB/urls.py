@@ -22,9 +22,13 @@ from django.urls import path
 from usuarios.views import index
 from usuarios.views import sobre
 from usuarios.views import contato
+from funcionarios.views import home_fun
 from livros.views import home
 from livros.views import acervo
 from livros.views import informacoes_livros
+
+from contato.views import lcontatos
+from reserva.views import reserva
 
 urlpatterns = [
     path("admin/", admin.site.urls),
@@ -63,6 +67,24 @@ urlpatterns = [
         "livro/<int:id>/",
         informacoes_livros,
         name='informacoes_livros',
+    ),
+    
+    path(
+       "home_fun/",
+       home_fun,
+       name='home_fun'
+    ),
+    
+    path(
+        "lcontatos/",
+        lcontatos,
+        name='lcontatos'
+    ),
+    
+    path(
+        "reserva/",
+        reserva,
+        name='reserva',
     )
 ]
 

@@ -39,3 +39,6 @@ def informacoes_livros(request, id):
     }
     
     return render(request, "livro.html", context)
+
+
+

@@ -1,0 +1,63 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width,
+    initial-scale=1.0">
+    <title>BOB</title>
+    <link rel="stylesheet"  href= "{% static 'css/style1.css' %}">
+    <script src="https://kit.fontawesome.com/be8c5b7455.js" crossorigin="anonymous"></script>
+
+    <header>
+        <nav>
+            <a class="logo" href="index.html">Gestor BOB</a>
+            <div class="mobile-menu">
+                <div class="line1"></div>
+                <div class="line2"></div>
+                <div class="line3"></div>
+            </div>
+            
+            <ul class="nav-list">
+                <li><a href="{% url 'home_fun' %}">Inicio</a></li>
+                <li><a href="{% url 'reserva' %}">Reservas</a></li>
+                <li><a href="{% url 'lcontatos' %}">Mensagens</a></li>
+            </ul>
+        </nav>
+    </header>
+    
+    <script src="{% static 'js/mobile-navbar.js' %}"></script>
+
+</head>
+
+<body>
+    <link rel="stylesheet"  href= "{% static 'css/style4.css' %}">
+    <div class="postagem-content">        
+        <div>
+            <h1> Lista de Reservas </h1>
+
+            <div class="card-body">
+                <div class="table-responsive">
+
+                    <table class="table table-bordered">
+                        <tr class="zebra">
+                            <th>Nome completo</th><th>Livro</th><th>Data de requisição</th><th>Operação</th>
+                        </tr>
+    
+                        {% for contato in todos_contatos %}
+                            <tr>
+                                <td > {{ contato.nome_completo }} </td><td> {{ contato.telefone }} </td><td> {{ contato.motivo }} </td><td> {{ contato.mensagem }} </td><td><a type="button" href=" ">  
+                                    <input type="button" value="Marcar como lido">
+                                </a></td>
+                            </tr>
+                        {% endfor %}
+                    </table>
+                   
+                </div>
+            </div>
+        </div>
+    </div>
+</body>

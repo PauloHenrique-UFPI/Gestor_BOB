@@ -8,7 +8,8 @@ class Livro(models.Model):
    
     titulo = models.CharField(
         verbose_name= 'Titulo do livro',
-        max_length=120
+        max_length=120,
+        unique=True,#validação para que dois usuario não possam usar o mesmo email
     )
     
     nome_autor = models.CharField(

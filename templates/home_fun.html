@@ -9,12 +9,12 @@
     <meta name="viewport" content="width=device-width,
     initial-scale=1.0">
     <title>BOB</title>
-    <link rel="stylesheet"  href= "{% static 'css/style1.css' %}">
-    
+    <link href={% static 'css/style1.css'%} rel="stylesheet">
+    <script src="https://kit.fontawesome.com/be8c5b7455.js" crossorigin="anonymous"></script>
 
     <header>
         <nav>
-            <a class="logo" href="#">Gestor BOB</a>
+            <a class="logo" href="index.html">Gestor BOB</a>
             <div class="mobile-menu">
                 <div class="line1"></div>
                 <div class="line2"></div>
@@ -22,10 +22,9 @@
             </div>
             
             <ul class="nav-list">
-                <li><a href="{% url 'home' %}">Inicio</a></li>
-                <li><a href= "{% url 'sobre' %}">Sobre</a></li>
-                <li><a href="{% url 'acervo' %}">Acervo</a></li>
-                <li><a href="{% url 'contato' %}">Contatos</a></li>
+                <li><a href="{% url 'home_fun' %}">Inicio</a></li>
+                <li><a href="{% url 'reserva' %}">Reservas</a></li>
+                <li><a href="{% url 'lcontatos' %}">Mensagens</a></li>
             </ul>
         </nav>
     </header>
@@ -35,33 +34,18 @@
 </head>
 
 <body>
-    <link rel="stylesheet"  href= "{% static 'css/styleHome.css' %}">
+    <link href={% static 'css/op1.css'%} rel="stylesheet">
     <div class="titulo_pagina">
-        <h2> Bem vindo ao nosso site </h2>
+        <h2> Bem vindo funcionario</h2>
     </div>
     <p> 
-        Navegue pelas paginas, na pagina de acervo você pode pesquisar pelo seu livro favorito
-        além de encontrar diversos livros que podem te interessar.
+       Aqui você tem acesso as funcionalidades para os funcionarios da biblioteca
     </p>
     <div class="cima">
-            
-        <img src="{% static 'images/tela_acervo.png' %}">
 
         <p>
             "Somos um planeta vivo, Sofia! Somos um grande barco navegando ao redor de um sol incandescente 
             no universo. Mas cada um de nós é um barco em si mesmo, um barco carregado de genes navegando pela 
             vida. Se conseguirmos levar esta carga ao porto mais próximo, nossa vida não terá sido em vão." (Jostein Gaarder)
         </p>
-
-        <p>
-            "Sou atormentado por uma coceira interminável por coisas distantes. Eu adoro navegar por mares proibidos." (Moby Dick)
-        </p>
-    </div>
-
 </body>
-
-
-
-
-
-</html>
