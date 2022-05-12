@@ -3,7 +3,7 @@
 <!DOCTYPE html>
 <html lang="pt-br">
 
-
+{% if request.user.is_authenticated %}
 
 <head>
     <meta charset="UTF-8">
@@ -39,7 +39,6 @@
 
 <body class="body_2">
     <link href={% static 'css/style2.css'%} rel="stylesheet">
-
         
     <form action="" method="GET">
         <div>
@@ -112,5 +111,8 @@
 
  
 </body>
+{% else %}
+<h3> USUARIO NÃO AUTENTICADO<h3>
+{% endif %}
 
 </html>

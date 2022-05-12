@@ -3,6 +3,7 @@
 <!DOCTYPE html>
 <html lang="pt-br">
 
+{% if request.user.is_authenticated %}
 
 <head>
     <meta charset="UTF-8">
@@ -39,17 +40,20 @@
     <link href={% static 'css/style2.css'%} rel="stylesheet">
     <div >
         
-        <form >
+        <form action="." method="post">
             <h2 id="titutol">Algum problema?</h2>
             <h2 id="subtitulo">Entre em contato</h2>
+
+            {% csrf_token %}
+
             <div class="campo">
                 <label> <strong> Nome </strong></label>
-                <input type="text" name="nome" id="nome" required>
+                <input type="text" name="nome_completo" id="nome_completo" required>
             </div>
 
             <div class="campo">
                 <label> <strong> Telefone </strong></label>
-                <input type="text" name="Telefone" id="telefone">
+                <input type="text" name="telefone" id="telefone">
             </div>
 
             <div class="campo">
@@ -60,18 +64,7 @@
 
             <div class="campo1">
                 <label>Qual o motivo da mensagem:</label>
-                <label>
-                    <input type="radio" name="op_mensagem" value="op1" checked> Elogio
-                </label> 
-                <label>
-                    <input type="radio" name="op_mensagem" value="op2"> Sugestão 
-                </label> 
-                <label> 
-                    <input type="radio" name="op_mensagem" value="op3"> Critica 
-                </label> 
-                <label>
-                    <input type="radio" name="op_mensagem" value="op4"> Sistema
-                </label> 
+                <input type="motivo" name="motivo" id="motivo" required>
             </div>
 
             <div class="campo">
@@ -80,8 +73,17 @@
                 <textarea name="mensagem" id="mensagem" rows="6" style="width: 35em" required></textarea>
             </div>
 
-            <button type="submit" class="botao"> Enviar </button>
+            <button type="submit" class="botao" valeu="Salvar"> Enviar </button>++
+
+        
 
         </form>
+
     </div>
 </body>
+
+{% else %}
+<h3> USUARIO NÃO AUTENTICADO<h3>
+{% endif %}
+
+</html>

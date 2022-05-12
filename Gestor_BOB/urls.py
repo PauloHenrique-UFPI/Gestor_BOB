@@ -17,21 +17,24 @@ from xml.dom.minidom import Document
 from django.contrib import admin
 from django.conf.urls.static import static
 from django.conf import settings
+from django.urls import include
 
 from django.urls import path
 from usuarios.views import index
 from usuarios.views import sobre
-from usuarios.views import contato
 from funcionarios.views import home_fun
 from livros.views import home
 from livros.views import acervo
 from livros.views import informacoes_livros
 
+from contato.views import contato
 from contato.views import lcontatos
 from reserva.views import reserva
 
 urlpatterns = [
     path("admin/", admin.site.urls),
+    
+    path("", include('usuarios.urls')),
     
     path(
         "",

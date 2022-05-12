@@ -6,6 +6,8 @@ class Reseva(models.Model):#classe para tratar dos funcionarios do sistema
         "usuarios.Usuario",
         verbose_name="Usuário",
     )
+
+
     
     livro = models.ManyToManyField(
         "livros.Livro",

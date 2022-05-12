@@ -1,6 +1,7 @@
 {% load static %}
 {% load widget_tweaks %}
 
+{% if request.user.is_authenticated %}
 
 <!DOCTYPE html>
 <html lang="pt-br">
@@ -88,6 +89,9 @@
         </div>
     </div>
 </body>
+{% else %}
+<h3> USUARIO NÃO AUTENTICADO<h3>
+{% endif %}
 
 </html>
 

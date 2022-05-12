@@ -47,9 +47,9 @@
                             <th>Nome completo</th><th>Livro</th><th>Data de requisição</th><th>Operação</th>
                         </tr>
     
-                        {% for contato in todos_contatos %}
+                        {% for reserva in todas_reserva %}
                             <tr>
-                                <td > {{ contato.nome_completo }} </td><td> {{ contato.telefone }} </td><td> {{ contato.motivo }} </td><td> {{ contato.mensagem }} </td><td><a type="button" href=" ">  
+                                <td > {{ reserva.usuario }} </td><td> {{ reserva.livro }} </td><td> {{ reserva.data }} </td><td><a type="button" href=" ">  
                                     <input type="button" value="Marcar como lido">
                                 </a></td>
                             </tr>
